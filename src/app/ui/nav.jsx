@@ -8,8 +8,8 @@ const navigation = [
     { name: 'Inicio', href: '../', current: true },
     { name: 'Sobre nosotros', href: '../sobrenosotros', current: false },
     { name: 'Ubicación', href: '../ubicacion', current: false },
-    { name: 'Calendar', href: '#', current: false },
 ]
+
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -68,6 +68,9 @@ export default function Nav() {
                                     <TiShoppingCart />
 
                                 </button>
+
+                                <a href='../login' className='ml-10 text-white cursor-pointer' >Iniciar Sesión</a>
+                                <a href='../register' className='ml-10 text-white cursor-pointer' >Registrarse</a>
 
                                 {/* Profile dropdown */}
                                 <Menu as="div" className="relative ml-3">
