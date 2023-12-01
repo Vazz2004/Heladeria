@@ -29,7 +29,7 @@ const products = [
         id: 1,
         name: 'Helado2',
         href: '#',
-        imageSrc: '/helado2.jpg',
+        imageSrc: '/productos/img11.webp',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$30',
         color: 'Black',
