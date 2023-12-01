@@ -127,7 +127,6 @@ const Login = () => {
                                 <input
                                     id="email"
                                     name="email"
-                                    type="email"
                                     value={correo}
                                     onChange={handleCorreoChange}
                                     autoComplete="email"
