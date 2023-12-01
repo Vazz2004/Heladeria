@@ -1,8 +1,8 @@
-import Dashini from '../ui/inidash'
+import Empleado from '@/app/ui/empleados'
 export default function Home() {
   return (
     <main>
-      <Dashini />
+      <Empleado />
     </main>
   )
 }

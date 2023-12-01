@@ -1,6 +1,5 @@
 import { Inter } from 'next/font/google'
 import '/src/app/globals.css'
-import NavDash from'/src/app/ui/navDash.jsx'
 const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'SamHeladeria',
@@ -12,7 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
 
       <body className={inter.className}>
-        <NavDash />
+        
         {children}
       </body>
     

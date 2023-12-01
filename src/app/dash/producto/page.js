@@ -1,8 +1,8 @@
-import Dashini from '../ui/inidash'
+import Productos from '/src/app/ui/productos.jsx'
 export default function Home() {
   return (
     <main>
-      <Dashini />
+      <Productos />
     </main>
   )
 }

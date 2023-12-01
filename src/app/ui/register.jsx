@@ -16,15 +16,15 @@ const Login = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
         // Validar el correo y la contraseña
-        if (correo === "usuario@gmail.com" && contrasena === "root#1234") {
+        if (correo.trim() === "" || contrasena.trim() === "") {
+            setError("Por favor, completa todos los campos.");
+        } else if (correo !== "usuario@gmail.com" || contrasena !== "root#1234") {
+            setError("Correo o contraseña incorrectos");
+        } else {
             // Acceso concedido
             setError("");
             window.open("../")
-        } else {
-            // Acceso denegado
-            setError("Correo o contraseña incorrectos");
         }
     };
 

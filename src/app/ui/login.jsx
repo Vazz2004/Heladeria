@@ -1,10 +1,14 @@
 'use client'
+import Image from "next/image";
 import React, { useState } from "react";
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
 
 const Login = () => {
     const [correo, setCorreo] = useState("");
     const [contrasena, setContrasena] = useState("");
     const [error, setError] = useState("");
+    const [showAlert, setShowAlert] = useState(false);
 
     const handleCorreoChange = (event) => {
         setCorreo(event.target.value);
@@ -12,6 +16,14 @@ const Login = () => {
 
     const handleContrasenaChange = (event) => {
         setContrasena(event.target.value);
+    };
+
+    const handleShowAlert = () => {
+        setShowAlert(true);
+    };
+
+    const handleHideAlert = () => {
+        setShowAlert(false);
     };
 
     const handleSubmit = (event) => {
@@ -22,9 +34,13 @@ const Login = () => {
             // Acceso concedido
             setError("");
             window.open("../")
-        } else {
-            // Acceso denegado
-            setError("Correo o contraseña incorrectos");
+        }
+        if (correo === "admin@gmail.com" && contrasena === "admin#1234") {
+            setError("")
+            window.open("./dash")
+        }
+        else {
+            handleShowAlert()
         }
     };
 
@@ -37,6 +53,12 @@ const Login = () => {
                         src="/logo/logo.png"
                         alt="Your Company"
                     />
+
+                    {showAlert && (
+                        <Alert severity="error" className="mt-10" >No se a encontrado este usuario. Revise el Correo y contraseña</Alert>
+                    )}
+
+
                     <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
                         Entra en tu cuenta
                     </h2>
