@@ -33,7 +33,7 @@ const Login = () => {
         if (correo === "usuario@gmail.com" && contrasena === "root#1234") {
             // Acceso concedido
             setError("");
-            window.open("../")
+            window.open("./user")
         }
         if (correo === "admin@gmail.com" && contrasena === "admin#1234") {
             setError("")

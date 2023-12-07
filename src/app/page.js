@@ -3,6 +3,7 @@ import Card from './ui/card.jsx'
 import MyCarousel from './ui/carrusel'
 import Logos from './ui/logos'
 import Nav from './ui/nav'
+import Prueba from './ui/producCompra'
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
       <Card />
       <Logos />
       <Baner />
+      <Prueba />
+      
     </main>
   )
 }
